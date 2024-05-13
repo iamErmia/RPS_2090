@@ -1,6 +1,23 @@
+@font-face {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: regular;
+  src: url(../assets/fonts/Poppins-Regular.ttf);
+}
+
 :root {
+  --violet: #3b2a9f;
+  --orange: #fa8305;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.bg-violet{
+  background-color: var(--violet);
+}
+
+.bg-orange{
+  background-color: var(--orange);
 }
