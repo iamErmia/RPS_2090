@@ -21,3 +21,16 @@
 .bg-orange{
   background-color: var(--orange);
 }
+
+.dots{
+  scale: 60%;
+}
+
+.play-button{
+  display: flex;
+  justify-content: center;
+  width: 130px;
+  height: 60px;
+  border: white 4px solid;
+  border-radius: 5px;
+}
