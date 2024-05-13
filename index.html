@@ -13,31 +13,35 @@
   </head>
   <body class="bg-violet">
     <div class="d-flex flex-column justify-content-center mx-auto w-75 fs-2">
+      <a class="btn btn-dark mt-3 ms-3" href="multiPlayer.html">2 Player</a>
       <div class="d-flex justify-content-center mx-auto text-white fw-bold mb-4">
-        <p>DRAW</p>
+        <p id="winner">DRAW</p>
       </div>
       <div class="d-flex justify-content-center mx-auto text-white mb-2">
-        <p>You 0 : 0 Ai</p>
+        <p id="score">You 0 : 0 Ai</p>
       </div>
-      <div class="d-flex justify-content-center mx-auto text-white mb-2">
-        <p>Computer Chose “rock/paper/scissor”</p>
+      <div class="d-flex justify-content-center flex-column align-items-center my-4">
+        <h1 class="text-white" id="pctex">Computer</h1>
+        <img class="bg-card p-3 rounded-5" width="150px" id="comp" src="./assets/images/Question Mark.png" alt="">
       </div>
       <div class="d-flex justify-content-between mx-auto">
         <div class="d-flex flex-column justify-content-center align-items-center m-5">
-          <img src="./assets/images/paper 1.png" class="mb-3" alt="paper">
-          <img src="./assets/images/Dotted Elipse.png" class="dots" alt="">
+          <img src="./assets/images/paper-1.png" class="mb-3" alt="paper">
+          <input type="radio" name="game" id="paper">
         </div>
         <div class="d-flex flex-column justify-content-center align-items-center m-5">
           <img src="./assets/images/Scissors.png" class="mb-3" alt="paper">
-          <img src="./assets/images/Elipse.png" class="dots" alt="">
+          <input type="radio" name="game" id="scissors">
         </div>
         <div class="d-flex flex-column justify-content-center align-items-center m-5">
-          <img src="./assets/images/rock 1.png" class="mb-3" alt="paper">
-          <img src="./assets/images/Elipse.png" class="dots" alt="">
+          <img src="./assets/images/rock-1.png" class="mb-3" alt="paper">
+          <input type="radio" name="game" id="rock">
         </div>
       </div>
+
       <div class="d-flex justify-content-center align-items-center text-white fw-bold">
-        <p class="play-button">Start</p>
+        <input class="play-button" value="Start" type="submit" id="startgame">
+        <p class="text-danger" id="note"></p>
       </div>
     </div>
 
