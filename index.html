@@ -6,7 +6,10 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="./style/style.css" />
-    <link rel="stylesheet" href="./style/bootstrap/bootstrap/css/bootstrap.css">
+    <link
+      rel="stylesheet"
+      href="./style/bootstrap/bootstrap/css/bootstrap.css"
+    />
     <!-- insert bootstrap link -->
     <!-- title -->
     <title>Rock Paper Scissor</title>
@@ -14,17 +17,51 @@
   <body class="bg-violet">
     <div class="d-flex flex-column justify-content-center mx-auto w-75 fs-2">
       <a class="btn btn-dark mt-3 ms-3" href="multiPlayer.html">2 Player</a>
-      <div class="d-flex justify-content-center mx-auto text-white fw-bold mb-4">
-        <p id="winner">DRAW</p>
+      <div
+        class="d-flex justify-content-center mx-auto text-white fw-bold mb-4"
+      >
+        <p id="winner">Who will win?</p>
       </div>
       <div class="d-flex justify-content-center mx-auto text-white mb-2">
         <p id="score">You 0 : 0 Ai</p>
       </div>
-      <div class="d-flex justify-content-center flex-column align-items-center my-4">
-        <h1 class="text-white" id="pctex">Computer</h1>
-        <img class="bg-card p-3 rounded-5" width="150px" id="comp" src="./assets/images/Question Mark.png" alt="">
+      <div
+        class="d-flex justify-content-center flex-column align-items-center my-4"
+      >
+        <h1 class="text-white" id="pcchoose">Computer</h1>
       </div>
-      <div class="d-flex justify-content-between mx-auto">
+      <form>
+        <div class="d-flex justify-content-center align-items-center">
+          <label class="d-flex justify-content-between flex-column mx-auto">
+            <img src="./assets/images/paper-1.png" class="mb-3" alt="paper" />
+            <input type="radio" name="game" id="paper" />
+          </label>
+          <label class="d-flex justify-content-between flex-column mx-auto">
+            <img
+              src="./assets/images/Scissors.png"
+              class="mb-3"
+              alt="scissors"
+            />
+            <input type="radio" name="game" id="scissors" />
+          </label>
+          <label class="d-flex justify-content-between flex-column mx-auto">
+            <img src="./assets/images/rock-1.png" class="mb-3" alt="rock" />
+            <input type="radio" name="game" id="rock" />
+          </label>
+        </div>
+        <div
+          class="d-flex flex-column justify-content-center align-items-center mt-3 text-white fw-bold"
+        >
+          <input
+            class="play-button"
+            value="Start"
+            type="submit"
+            id="startgame"
+          />
+          <p class="text-danger" id="note"></p>
+        </div>
+      </form>
+      <!--<div class="d-flex justify-content-between mx-auto">
         <div class="d-flex flex-column justify-content-center align-items-center m-5">
           <img src="./assets/images/paper-1.png" class="mb-3" alt="paper">
           <input type="radio" name="game" id="paper">
@@ -37,12 +74,7 @@
           <img src="./assets/images/rock-1.png" class="mb-3" alt="paper">
           <input type="radio" name="game" id="rock">
         </div>
-      </div>
-
-      <div class="d-flex justify-content-center align-items-center text-white fw-bold">
-        <input class="play-button" value="Start" type="submit" id="startgame">
-        <p class="text-danger" id="note"></p>
-      </div>
+      </div>-->
     </div>
 
     <!-- scripts -->

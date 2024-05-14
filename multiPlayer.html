@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="stylesheet"
+      href="./style/bootstrap/bootstrap/css/bootstrap.css"
+    />
+    <!-- insert bootstrap link -->
+    <!-- title -->
+    <title>Rock Paper Scissor</title>
+  </head>
+  <body class="bg-violet">
+    <div class="d-flex flex-column justify-content-center mx-auto w-75 fs-2">
+      <a class="btn btn-dark mt-3 ms-3" href="index.html">Single Player</a>
+      <div
+        class="d-flex justify-content-center mx-auto text-white fw-bold mb-4"
+      >
+        <p id="winner">Who will win?</p>
+      </div>
+      <div class="d-flex justify-content-center mx-auto text-white mb-2">
+        <p id="score">Player-1 0 : 0 Player-2</p>
+      </div>
+      
+      <div class="d-flex justify-content-around">
+        <div class="d-flex justify-content-center pt-3 px-3 rounded-4 border border-warning border-4 ">
+            <div class="d-flex justify-content-center flex-column text-center text-white">
+                <img src="./assets/images/rock-1.png" width="120px" alt="">
+                <p>A</p>
+            </div>
+            <div class="d-flex justify-content-center flex-column text-center text-white">
+                <img src="./assets/images/paper-1.png" width="120px" alt="">
+                <p>S</p>
+            </div>
+            <div class="d-flex justify-content-center flex-column text-center text-white">
+                <img src="./assets/images/Scissors.png" width="120px" alt="">
+                <p>D</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center pt-3 px-3 rounded-4 border border-warning border-4 ">
+            <div class="d-flex justify-content-center flex-column text-center text-white">
+                <img src="./assets/images/rock-1.png" width="120px" alt="">
+                <p>←</p>
+            </div>
+            <div class="d-flex justify-content-center flex-column text-center text-white">
+                <img src="./assets/images/paper-1.png" width="120px" alt="">
+                <p>↓</p>
+            </div>
+            <div class="d-flex justify-content-center flex-column text-center text-white">
+                <img src="./assets/images/Scissors.png" width="120px" alt="">
+                <p>→</p>
+            </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- scripts -->
+    <script src="./script/mplayer.js"></script>
+  </body>
+</html>

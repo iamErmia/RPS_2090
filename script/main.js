@@ -13,10 +13,9 @@ startGame.addEventListener("click", (e)=>{
     const scissors = document.getElementById("scissors"); //Defining scissors
     const rock = document.getElementById("rock"); //Defining rock
 
-    const randNum = makeRand();
+    var randNum = makeRand();
 
-    const pcchose = document.getElementById("comp");
-    const pctext = document.getElementById("pctext");
+    const pcchoose = document.getElementById("pcchoose");
 
     const score = document.getElementById("score");
     const winner = document.getElementById("winner");
@@ -26,16 +25,13 @@ startGame.addEventListener("click", (e)=>{
     if(paper.checked || scissors.checked || rock.checked){
         switch(randNum){
             case 1:
-                pcchose.src=".././assets/images/paper-1.png";
-                pctext.innerText="Computer chose : Paper";
+                pcchoose.innerHTML="Computer chose : Paper";
             break;
             case 2:
-                pcchose.src=".././assets/images/Scissors.png";
-                pctext.innerText="Computer chose : Scissors";
+                pcchoose.innerHTML="Computer chose : Scissors";
             break; 
             case 3:
-                pcchose.src=".././assets/images/rock-1.png";
-                pctext.innerText="Computer chose : Rock";
+                pcchoose.innerHTML="Computer chose : Rock";
             break;                 
         }
 
@@ -51,46 +47,46 @@ startGame.addEventListener("click", (e)=>{
             c_score++;
             p_score++;
         } else if(randNum==2){
-            winner.innerText="Computer Won";
+            winner.innerText="COMPUTER WIN";
             winner.classList="text-danger";
             c_score++;
         } else if(randNum==3){
-            winner.innerText="You Won";
+            winner.innerText="PLAYER WIN";
             winner.classList="text-success";
             p_score++;
         }
-    } else if (scissors.checked){
-        if(randNum==1){
-            winner.innerText="You Won";
-            winner.classList="text-success";
-            p_score++;
-        } else if(randNum==2){
-            winner.innerText="DRAW";
-            winner.classList="text-warnin";
-            p_score++;
-            c_score++;
-        } else if(randNum==3){
-            winner.innerText="Computer Won";
-            winner.classList="text-danger";
-            c_score++;
-        }
-    } else if(rock.checked){
-        if(randNum==1){
-            winner.innerText="Computer Won";
-            winner.classList="text-danger";
-            c_score++;
-        } else if(randNum==2){
-            winner.innerText="You Won";
-            winner.classList="text-success";
-            p_score++;
-        } else if(randNum==3){
+    } else if (scissors.checked) {
+        if(randNum==2){
             winner.innerText="DRAW";
             winner.classList="text-warning";
-            p_score++;
             c_score++;
+            p_score++;
+        } else if(randNum==3){
+            winner.innerText="COMPUTER WIN";
+            winner.classList="text-danger";
+            c_score++;
+        } else if(randNum==1){
+            winner.innerText="PLAYER WIN";
+            winner.classList="text-success";
+            p_score++;
+        }
+    } else if (rock.checked){
+        if(randNum==3){
+            winner.innerText="DRAW";
+            winner.classList="text-warning";
+            c_score++;
+            p_score++;
+        } else if(randNum==1){
+            winner.innerText="COMPUTER WIN";
+            winner.classList="text-danger";
+            c_score++;
+        } else if(randNum==2){
+            winner.innerText="PLAYER WIN";
+            winner.classList="text-success";
+            p_score++;
         }
     } else if(!(paper.checked) && !(rock.checked) && !(scissors.checked)){
-        note.innerHTML="*Please Select An Option";
+        note.innerHTML="*Please Select The Option";
         winner.innerText="Who Will Win??";
         winner.classList="";
     }
